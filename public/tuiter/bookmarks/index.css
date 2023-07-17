@@ -1,0 +1,73 @@
+.wd-circular {
+  border-radius: 50%;
+}
+
+.wd-max-width {
+  max-width: 500px;
+}
+
+.wd-rounded-corners {
+  border-radius: 20px;
+}
+
+.wd-rounded-corners-top {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.wd-border-bottom {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(193, 209, 221);
+}
+
+.wd-color-red {
+  color: red;
+}
+
+
+
+.wd-symbol-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.wd-symbol-list>div {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  /* Adjust the spacing between symbol-count pairs */
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.wd-left-padding {
+  padding-left: 12px;
+}
+
+.wd-symbol-padding {
+  padding-left: 45px;
+}
+
+.wd-non-logo-padding {
+  padding-left: 60px;
+  padding-top: 12px;
+}
+
+.wd-small-logo-padding {
+  padding-left: 8px;
+  padding-top: 12PX;
+}
+
+.wd-small-padding-top {
+  padding-top: 5px;
+}
+
+.wd-ellipsis-padding {
+  padding-left: 300px;
+}
+
+.wd-small-ellipsis-padding {
+  padding-left: 200px;
+}

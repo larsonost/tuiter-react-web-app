@@ -1,0 +1,66 @@
+.wd-bg-color-black {
+    background-color: black;
+  }
+  
+  .wd-margin-sides-16 {
+    margin: 0 16px;
+  }
+  
+  .wd-border {
+    border-width: 1px;
+    border-color: rgb(165, 175, 183);
+    border-style: solid;
+    max-width: 585px;
+  }
+  
+  .wd-border-image {
+    border-width: 1px;
+    border-color: rgb(165, 175, 183);
+    border-style: solid;
+    max-width: 500px;
+  }
+
+
+  .wd-font-family {
+    font-family: Arial;
+  }
+  
+  .wd-color-white {
+    color: white;
+  }
+  
+  .wd-font-size-13 {
+    font-size: 13px;
+  }
+  
+  .wd-font-size-15 {
+    font-size: 15px;
+  }
+  
+  .wd-color-lightgray {
+    color: rgb(110, 118, 125);
+  }
+  
+  .wd-text-decoration-none {
+    text-decoration: none;
+  }
+  
+  .wd-flex {
+    display: flex;
+  }
+  
+  .wd-float-right {
+    float: right;
+  }
+  
+  .wd-inline-block {
+    display: inline-block;
+  }
+  
+  .wd-max-width-475 {
+    max-width: 475px;
+  }
+  
+  .wd-text-align-center {
+    text-align: center;
+  }
