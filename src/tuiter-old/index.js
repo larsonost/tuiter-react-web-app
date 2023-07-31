@@ -9,35 +9,37 @@ import WhoToFollowList from "./who-to-follow-list";
 import whoReducer from "./reducers/who-reducer";
 import tuitsReducer from "./reducers/tuits-reducer";
 import { configureStore } from '@reduxjs/toolkit';
-import {Provider} from "react-redux";
+import { Provider } from "react-redux";
 const store = configureStore(
-  {reducer: {who: whoReducer, tuits: tuitsReducer}});
+    { reducer: { who: whoReducer, tuits: tuitsReducer } });
 
 function Tuiter() {
     return (
         <Provider store={store}>
-        <div>
-            <Nav />
-            <div className="row">
-                <div className="col-2">
-                    <NavigationSidebar />
-                </div>
-                <div className="col-7">
-                    <Routes>
-                        <Route path="/home" element={<HomeScreen />} />
-                        <Route path="/explore" element={<ExploreScreen />} />
-                        <Route path="/bookmarks" element={<BookmarksScreen />} />
-                        <Route path="/profile" element={<ProfileScreen />} />
+            <div>
+                <Nav />
+                <div className="row">
+                    <div className="col-lg-2 col-md-3 col-sm-3 col-3">
+                        <NavigationSidebar />
+                    </div>
+                    <div className="col-lg-7 col-md-9 col-sm-9 col-9">
+                        <Routes>
+                            <Route path="/home" element={<HomeScreen />} />
+                            <Route path="/explore" element={<ExploreScreen />} />
+                            <Route path="/bookmarks" element={<BookmarksScreen />} />
+                            <Route path="/profile" element={<ProfileScreen />} />
 
-                    </Routes>
-                </div>
-                <div className="col-3">
-                    <WhoToFollowList />
+                        </Routes>
+                    </div>
+                    <div className="col-lg-3 d-none d-lg-block">
+                        <div class="d-none d-lg-block">
+                            <WhoToFollowList />
+                        </div>
 
 
+                    </div>
                 </div>
             </div>
-        </div>
         </Provider>
     );
 }
