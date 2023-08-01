@@ -23,7 +23,7 @@ const TuitItem = ({ tuit }) => {
                 <div className="delete-button" onClick={() => deleteTuitHandler(tuit._id)}>
                     <FaTimes className="delete-icon" />
                 </div>
-                    <div><b>{tuit.userName}</b> <FaCheck className="checkmark-icon" /> {tuit.handle} · {tuit.time}</div>
+                    <div><b>{tuit.username}</b> <FaCheck className="checkmark-icon" /> {tuit.handle} · {tuit.time}</div>
                     <div>{tuit.tuit}</div>
                     <div className="row-padding"><TuitStats tuit={tuit} /></div>
                 </div>
