@@ -2,6 +2,9 @@ import { Routes, Route } from "react-router";
 import Nav from "../nav";
 import NavigationSidebar from "./navigation-sidebar";
 import HomeScreen from "./home-screen";
+import LoginScreen from "./user/login-screen";
+import RegisterScreen from "./user/register-screen";
+import authReducer from "./reducers/auth-reducer";
 import ExploreScreen from "./explore-screen/index.js";
 import BookmarksScreen from "./bookmarks-screen";
 import ProfileScreen from "./profile-screen";
@@ -11,7 +14,7 @@ import tuitsReducer from "./reducers/tuits-reducer";
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from "react-redux";
 const store = configureStore(
-    { reducer: { who: whoReducer, tuits: tuitsReducer } });
+    { reducer: { who: whoReducer, tuits: tuitsReducer, user: authReducer } });
 
 function Tuiter() {
     return (
@@ -28,7 +31,9 @@ function Tuiter() {
                             <Route path="/explore" element={<ExploreScreen />} />
                             <Route path="/bookmarks" element={<BookmarksScreen />} />
                             <Route path="/profile" element={<ProfileScreen />} />
-
+                            <Route path="/login" element={<LoginScreen />} />
+                            <Route path="/register" element={<RegisterScreen />} />
+                            <Route path="/profile" element={<ProfileScreen />} />
                         </Routes>
                     </div>
                     <div className="col-lg-3 d-none d-lg-block">
