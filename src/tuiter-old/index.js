@@ -7,7 +7,7 @@ import RegisterScreen from "./user/register-screen";
 import authReducer from "./reducers/auth-reducer";
 import ExploreScreen from "./explore-screen/index.js";
 import BookmarksScreen from "./bookmarks-screen";
-import ProfileScreen from "./profile-screen";
+import ProfileScreen from "./user/profile-screen";
 import WhoToFollowList from "./who-to-follow-list";
 import whoReducer from "./reducers/who-reducer";
 import tuitsReducer from "./reducers/tuits-reducer";
