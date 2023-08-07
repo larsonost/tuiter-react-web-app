@@ -10,7 +10,7 @@ function LoginScreen() {
  const handleLogin = async () => {
   try {
     await dispatch(loginThunk({ username, password }));
-    navigate("/profile");
+    navigate("../profile");
   } catch (e) {
     alert(e);
   }
