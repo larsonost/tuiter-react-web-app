@@ -53,16 +53,18 @@ const TuitStats = ({ tuit }) => {
             <div className="col-2">
                 <FaRetweet /> {tuit.retuits}
             </div>
-            <div className="col-3" onClick={handleLikeToggle}><FontAwesomeIcon
+            <div className="col-3 d-flex align-items-center" onClick={handleLikeToggle}><FontAwesomeIcon
                 icon={faHeart}
-                style={{ color: liked ? "red" : "black"}}
+                style={{ color: liked ? "red" : "black" }}
+                className="icon-space"
             />
-                {likesNum}
+                    {likesNum}
             </div>
-            <div className="col-3" onClick={handleDisLikeToggle}><FontAwesomeIcon
-                
+            <div className="col-3 d-flex align-items-center" onClick={handleDisLikeToggle}><FontAwesomeIcon
+
                 icon={faThumbsDown}
-                style={{ color: disliked ? "blue" : "black"}}
+                style={{ color: disliked ? "blue" : "black" }}
+                className="icon-space"
             />
                 {dislikesNum}
             </div>
