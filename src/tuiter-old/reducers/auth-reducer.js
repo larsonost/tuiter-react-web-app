@@ -3,26 +3,32 @@ import { loginThunk, profileThunk, logoutThunk, updateUserThunk, registerThunk }
 
 
 const authSlice = createSlice({
- name: "auth",
- initialState: { currentUser: null },
- reducers: {},
- extraReducers: {
-  [logoutThunk.fulfilled]: (state) => {
-    state.currentUser = null;
+  name: "auth",
+  initialState: { currentUser: null },
+  reducers: {},
+  extraReducers: {
+    [logoutThunk.fulfilled]: (state) => {
+      state.currentUser = null;
+    },
+    [profileThunk.fulfilled]: (state, { payload }) => {
+      state.currentUser = payload;
+    },
+    [profileThunk.rejected]: (state, { payload }) => {
+      state.currentUser = null;
+    },
+    [profileThunk.pending]: (state, action) => {
+      state.currentUser = null;
+    },
+    [loginThunk.fulfilled]: (state, { payload }) => {
+      state.currentUser = payload;
+    },
+    [updateUserThunk.fulfilled]: (state, { payload }) => {
+      state.currentUser = payload;
+    },
+    [registerThunk.fulfilled]: (state, { payload }) => {
+      state.currentUser = payload;
+    },
   },
-  [profileThunk.fulfilled]: (state, { payload }) => {
-    state.currentUser = payload;
-  },
-  [profileThunk.rejected]: (state, { payload }) => {
-    state.currentUser = null;
-  },
-  [profileThunk.pending]: (state, action) => {
-    state.currentUser = null;
-  },
-  [updateUserThunk.fulfilled]: (state, { payload }) => {
-    state.currentUser = payload;
-  },
-  [registerThunk.fulfilled]: (state, { payload }) => {},
- },
 });
+
 export default authSlice.reducer;
